@@ -6,6 +6,7 @@ We have got a cache of the following form:
 Each entry is a pair of encoding type, and data, stored continouosly in memory, with no
 separators.
 Whenever we insert a new entry, the entries: plain, decode, and encode are stored.
+## cache primitve
 The code is as follows:
  ```
   for ( i = 0LL; i <= 5 && (*cache_entries)[i]; ++i )
@@ -24,13 +25,15 @@ The code is as follows:
   In order to do that, we need to find a decoding that decodes different streams into the same
   output stream. Plain doesn't do that, neither hex. What about a85?
 
+## encoding primitive
   a85 performs checks to validate the input, that is, 
   that the output is of length 4*(in/5)-3 at least, and that the chars are valid.
   However, that means we can put the padding wherever we want (not only at the end),
   and the same output will be reproduced.
   Thus, we can generate many encoded streams that are decoded into the same stream,
   allowing us to fill the cache.
-  
+
+## hash injection
   So we filled the cache. Now we override the hash. Since the hash is overriden with the stream
   ```<encoding><data>```, we need to make sure this stream is a hash that is controlled by us.
   The only valid stream for that is a85 (its chars are valid base16 digits),
