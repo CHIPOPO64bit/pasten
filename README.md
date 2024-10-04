@@ -7,7 +7,8 @@ Each entry is a pair of encoding type, and data, stored continouosly in memory, 
 separators.
 Whenever we insert a new entry, the entries: plain, decode, and encode are stored.
 The code is as follows:
- ```for ( i = 0LL; i <= 5 && (*cache_entries)[i]; ++i )
+ ```
+  for ( i = 0LL; i <= 5 && (*cache_entries)[i]; ++i )
   {
     encoding_len_2 = strlen(encoding);
     result = memcmp(mallocd, (*cache_entries)[i], encoding_len_2 + data_len);
@@ -16,7 +17,8 @@ The code is as follows:
   }
   result = (int)mallocd;
   (*cache_entries)[i] = mallocd;
-  return result;```
+  return result;
+  ```
   we have a vulnerability here! If the entries are full, we override the next hash in the cache.    
   However, we have only 3 types on encodings, so we can't just fill the cache. Can we?
   In order to do that, we need to find a decoding that decodes different streams into the same
