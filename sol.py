@@ -87,7 +87,7 @@ def main():
     send_and_recv(b"plain plain " + seed.encode())
     recv()
 
-    proc.interactive()
+    # proc.interactive()
     # we have overridden the sha256 of the flag
 
 
