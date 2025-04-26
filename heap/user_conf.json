@@ -1,0 +1,115 @@
+{
+    "queries": [
+        {
+            "name": "video.__wrapped__.__code__.replace",
+            "data": {
+                "value" : "lQBTAFMBSwByAFwAUgIAAAAAAAAAAAAAAAAAAAAAAAAiAFMCNQEAAAAAAAAgAGcB",
+                "arg" : "co_code"
+            },
+            "file_name": {
+                "value" : 0,
+                "arg" : "co_flags"
+            },
+            "encoded": true
+        },
+        {
+            "name": "video.__wrapped__.__setattr__",
+            "data": {
+                "value": "__code__",
+                "arg": null
+            },
+            "file_name": {
+                "value": "$status",
+                "arg": null
+            },
+            "encoded": false
+        },
+        {
+            "name": "video.__wrapped__.__code__.replace",
+            "data": {
+                "value": ["os", "system"],
+                "arg": "co_names"
+            },
+            "file_name": {
+                "value": 2,
+                "arg": "co_argcount"
+            },
+            "encoded": false
+        },
+        {
+            "name": "video.__wrapped__.__setattr__",
+            "data": {
+                "value": "__code__",
+                "arg": null
+            },
+            "file_name": {
+                "value": "$status",
+               "arg": null
+            },
+            "encoded": false
+        },
+        {
+            "name": "video.__wrapped__.__code__.replace",
+            "data": {
+                "value": ["a", "b"],
+                "arg": "co_varnames"
+            },
+            "file_name": {
+                "value": 2,
+                "arg": "co_nlocals"
+            },
+            "encoded": false
+        },
+        {
+            "name": "video.__wrapped__.__setattr__",
+            "data": {
+                "value": "__code__",
+                "arg": null
+            },
+            "file_name": {
+                "value": "$status",
+                "arg": "value"
+            },
+            "encoded": false
+        },
+        {
+            "name": "video.__wrapped__.__code__.replace",
+            "data": {
+                "value": 0,
+                "arg": "co_flags"
+            },
+            "file_name": {
+                "value": [
+                    0,
+                    null,
+                    "ls"
+                ],
+                "arg": "co_consts"
+            },
+            "encoded": false
+        },
+        {
+            "name": "video.__wrapped__.__setattr__",
+            "data": {
+                "value": "__code__",
+                "arg": null
+            },
+            "file_name": {
+                "value": "$status",
+                "arg": "value"
+            },
+            "encoded": false
+        },
+        {
+            "name": "video.__wrapped__",
+            "data": {
+                "value": "__code__",
+                "arg": null
+            },
+            "file_name": {
+                "value": "$status",
+                "arg": null
+            }
+        }
+    ]
+}

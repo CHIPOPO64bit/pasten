@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .video-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .video-container video {
+      max-width: 100%;
+      max-height: 100%;
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="video-container">
+    <video width="400" controls>
+      <source src="data:video/mp4;base64,{{ data }}" type="video/mp4">
+      <source src="data:video/webm;base64,{{ data }}" type="video/webm">
+    </video>
+  </div>
+
+</body>
+
+</html>
