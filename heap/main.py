@@ -72,7 +72,6 @@ def convert_to_immutable(a):
 
 def run_query(request):
     config = Compound.load_from_dict(DATABASE, input_filter=is_allowed)
-    # convert string to bytes...
     config.user = Compound.load_from_dict(request, input_filter=is_allowed)
     for query in config.user.queries:
         database_function = getattr(config.operations, query.name)
