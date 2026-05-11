@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0b0f17" />
+<meta name="description" content="Search Israeli public companies and get a visualized, data-rich financial report — objective findings only." />
+<title>Pasten · Israeli companies financial explorer</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0f17'/%3E%3Cpath d='M10 44 L24 30 L34 38 L54 16' fill='none' stroke='%2338bdf8' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="/styles.css" />
+<script src="/vendor/chart.umd.min.js" defer></script>
+<script src="/app.js" defer></script>
+</head>
+<body>
+<header class="appbar">
+  <div class="appbar-inner">
+    <div class="brand" id="brandHome" role="button" tabindex="0">
+      <span class="brand-mark">📈</span>
+      <span class="brand-text"><strong>Pasten</strong><small>Israeli companies · financial reports</small></span>
+    </div>
+    <div class="search-wrap">
+      <input id="search" type="search" autocomplete="off" spellcheck="false"
+             placeholder="Search any company or ticker (e.g. Teva, Bank Hapoalim, POLI.TA, NICE)…" />
+      <div id="suggest" class="suggest hidden"></div>
+    </div>
+  </div>
+</header>
+
+<main id="view">
+  <!-- Home view -->
+  <section id="home" class="view">
+    <div class="home-head">
+      <h1>Explore Israeli public companies</h1>
+      <p class="muted" id="homeSub">Browse by sector or search above. Pick a company for a full, visual financial report — objective data only, no buy/sell scoring.</p>
+    </div>
+    <div id="sectorChips" class="chips" aria-label="Filter by sector"></div>
+    <div id="companyCount" class="muted small"></div>
+    <div id="companyList" class="company-list"></div>
+  </section>
+
+  <!-- Report view -->
+  <section id="report" class="view hidden"></section>
+</main>
+
+<footer class="appfoot">
+  <p>Data: <span id="dataSources">Yahoo Finance (delayed quotes &amp; fundamentals)</span>. Built-in directory covers major Israeli &amp; Israeli-dual-listed companies; configure the TASE Data Hub for the full list.</p>
+  <p class="muted small">Informational use only. This tool reports objective data and does not rank, score, or recommend any company. Verify figures before making investment decisions.</p>
+</footer>
+
+<div id="toast" class="toast hidden"></div>
+</body>
+</html>

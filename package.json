@@ -1,0 +1,18 @@
+{
+  "name": "pasten",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Search Israeli (TASE-listed and Israeli dual-listed) companies and get a visualized, data-rich financial report — objective findings only, no buy/sell scoring.",
+  "type": "module",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.3",
+    "express": "^4.19.2"
+  }
+}
